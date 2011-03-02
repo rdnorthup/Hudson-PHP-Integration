@@ -5,5 +5,19 @@
 	<target name="build">
 	</target>
 	
+	<target name="clean"></target>
+	
+	<target name="prepare"></target>
+	
+	<target name="phpdoc"></target>
+	
+	<target name="phpcpd"></target>
+	
+	<target name="pdepend"></target>
+	
+	<target name="phpunit"></target>
+	
+	<target name="code-coverage"></target>
+	
 </project>
 
