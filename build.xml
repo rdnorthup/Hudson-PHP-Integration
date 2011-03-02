@@ -18,7 +18,11 @@
 	
 	<target name="phpcpd"></target>
 	
-	<target name="pdepend"></target>
+	<target name="pdepend">
+		<exec dir="." executable="pdepend" failonerror="true">
+		   <arg line="--jdepend-xml=build/logs/jdepend.xml ."/>
+  		</exec>
+	</target>
 	
 	<target name="phpunit"></target>
 	
