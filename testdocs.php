@@ -34,12 +34,10 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @package    PHPUnit
- * @author     Sebastian Bergmann <sebastian@phpunit.de>
- * @copyright  2002-2011 Sebastian Bergmann <sebastian@phpunit.de>
- * @license    http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link       http://www.phpunit.de/
- * @since      File available since Release 3.5.0
+ * @package    None
+ * @author     Ronnie Northup
+ * @link       http://www.portlandwebworks.com
+ * @since      File available since Release 
  */
 class MyTestClass {
 }
