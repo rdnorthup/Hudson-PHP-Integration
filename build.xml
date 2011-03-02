@@ -2,32 +2,8 @@
 
 <project name="Test Job" default="build">
 
- <target name="clean"> </target>
- 
- <target name="prepare">
- </target>
- 
- 
- <target name="phpdoc">
- </target>
- 
- <target name="phpcpd">
-</target>
- 
- <target name="pdepend">
- </target>
- 
- <target name="phpcs">
-</target>
- 
- <target name="phpunit">
- </target>
-       
- <target name="code-coverage">   
- </target>
-             
- 
- <target name="build"
-         depends="clean,prepare, phpcpd, pdepend, phpunit, code-coverage"/>
+	<target name="build">
+	</target>
+	
 </project>
 
