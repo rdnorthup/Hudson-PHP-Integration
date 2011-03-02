@@ -8,6 +8,8 @@ class MikeTest extends PHPUnit_Framework_TestCase {
 		// test to ensure that Mike is true
 		$mike = true;
 		$this->assertTrue($mike !== false);
+		$lastName = "Northup";
+		$this->assertFalse($lastName === "Northrup");
 	}
 }
 
