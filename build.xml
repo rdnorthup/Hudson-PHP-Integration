@@ -2,31 +2,45 @@
 
 <project name="Test Job" default="build">
 
-	<target name="build">
-		<delete dir="build/logs"/>
-		<delete dir="build/doc"/>
+	<target name="build" depends="clean, prepare, phpcpd, pdepend, phpunit, code-coverage">
 	</target>
 	
-	<target name="clean"></target>
+	<target name="clean">
+		<delete dir="build/logs"/>
+		<delete dir="build/docs"/>
+	</target>
 	
 	<target name="prepare">
 		<mkdir dir="build/logs"/>
-		<mkdir dir="build/doc"/>
+		<mkdir dir="build/docs"/>
 	</target>
 	
-	<target name="phpdoc"></target>
+	<target name="phpdoc">
+		<exec dir="." executable="phpdoc" failonerror="true">
+			<arg line="-t build/docs --directory . -ti 'Test Job Docs' --parseprivate on --undocumentedelements on --output HTML:Smarty:PHP"/>
+		</exec>
+	</target>
 	
-	<target name="phpcpd"></target>
+	<target name="phpcpd">
+	</target>
 	
 	<target name="pdepend">
 		<exec dir="." executable="pdepend" failonerror="true">
-		   <arg line="--jdepend-xml=build/logs/jdepend.xml ."/>
-  		</exec>
+			<arg line="--jdepend-xml=build/logs/jdepend.xml ."/>
+		</exec>
 	</target>
 	
-	<target name="phpunit"></target>
+	<target name="phpunit">
+		<exec dir="." executable="phpunit" failonerror="true">
+			<arg line="--log-junit build/logs/junit.xml --coverage-clover build/logs/clover.xml --verbose test"/>
+		</exec>
+	</target>
 	
-	<target name="code-coverage"></target>
+	<target name="code-coverage">
+		<exec dir="." executable="phpunit" failonerror="true">
+			<arg line="--coverage-html /Applications/MAMP/htdocs/code-coverage ."/>
+		</exec>
+	</target>
 	
 </project>
 
