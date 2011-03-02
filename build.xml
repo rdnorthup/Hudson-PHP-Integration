@@ -1,6 +1,8 @@
+<?xml version="1.0"?>
+
 <project name="Test Job" default="build">
  <target name="clean">
-  <delete dir="${basedir}/git/_build"/>
+  <!--<delete dir="${basedir}/git/_build"/>-->
   <delete dir="${basedir}/build"/>
  </target>
  
@@ -71,4 +73,3 @@
  <target name="build"
          depends="clean,prepare, phpcpd, pdepend, phpunit, code-coverage"/>
 </project>
-
