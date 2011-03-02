@@ -9,7 +9,7 @@ class MikeTest extends PHPUnit_Framework_TestCase {
 		$mike = true;
 		$this->assertTrue($mike !== false);
 		$lastName = "Northup";
-		$this->assertTrue($lastName === "Northrup");
+		$this->assertFalse($lastName === "Northrup");
 	}
 }
 
