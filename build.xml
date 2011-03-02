@@ -3,11 +3,16 @@
 <project name="Test Job" default="build">
 
 	<target name="build">
+		<delete dir="build/logs"/>
+		<delete dir="build/doc"/>
 	</target>
 	
 	<target name="clean"></target>
 	
-	<target name="prepare"></target>
+	<target name="prepare">
+		<mkdir dir="build/logs"/>
+		<mkdir dir="build/doc"/>
+	</target>
 	
 	<target name="phpdoc"></target>
 	
