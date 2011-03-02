@@ -2,7 +2,7 @@
 
 <project name="Test Job" default="build">
 
-	<target name="build" depends="clean, prepare, phpcpd, pdepend, phpunit, code-coverage">
+	<target name="build" depends="clean, prepare, phpcs, pdepend, phpunit, code-coverage">
 	</target>
 	
 	<target name="clean">
@@ -21,7 +21,10 @@
 		</exec>
 	</target>
 	
-	<target name="phpcpd">
+	<target name="phpcs">
+		<exec dir="." executable="phpcs" failonerror="false" output="build/logs/checkstyle.xml">
+			<arg line="--report=checkstyle ."/>
+		</exec>
 	</target>
 	
 	<target name="pdepend">
