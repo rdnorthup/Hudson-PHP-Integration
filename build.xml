@@ -26,7 +26,7 @@
 	<!-- Run PHP CodeStyle on the entire codebase and generate a checkstyle formatted report. -->	
 	<target name="phpcs">
 		<exec dir="." executable="phpcs" failonerror="false" output="target/docs/checkstyle.xml">
-			<arg line="--report=checkstyle --error-severity=4 ."/>
+			<arg line="--report=checkstyle ."/>
 		</exec>
 	</target>
 	
@@ -43,6 +43,13 @@
 		<exec dir="." executable="phpunit" failonerror="true">
 			<arg line="--log-junit target/test-results/junit.xml --coverage-clover target/docs/clover.xml test"/>
 		</exec>
+	</target>
+	
+	<!-- This target only ever executed when called out by name.  Deploys to MAMP. -->
+	<target name="deploy">
+		<copy todir="/Applications/MAMP/htdocs/deploytest">
+			<fileset dir="." excludes="target"/>
+		</copy>
 	</target>
 
 	
