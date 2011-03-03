@@ -2,7 +2,7 @@
 
 <project name="Test Job" default="build">
 
-	<target name="build" depends="clean, phpcs, prepare, phpdoc, phpunit">
+	<target name="build" depends="clean, prepare, phpcs, phpdoc, phpunit">
 	</target>
 	
 	<!-- Erase all previous work in the output directory. -->
