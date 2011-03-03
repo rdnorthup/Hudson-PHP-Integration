@@ -12,6 +12,7 @@
 	<target name="prepare">
 		<mkdir dir="build/logs"/>
 		<mkdir dir="build/docs"/>
+		<mkdir dir="build/test-results"/>
 	</target>
 	
 	<target name="phpdoc">
@@ -34,7 +35,7 @@
 	
 	<target name="phpunit">
 		<exec dir="." executable="phpunit" failonerror="true">
-			<arg line="--log-junit build/logs/junit.xml --coverage-clover build/logs/clover.xml test"/>
+			<arg line="--log-junit build/test-results/junit.xml --coverage-clover build/logs/clover.xml test"/>
 		</exec>
 	</target>
 
