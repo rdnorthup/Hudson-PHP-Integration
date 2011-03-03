@@ -6,8 +6,7 @@
 	</target>
 	
 	<target name="clean">
-		<delete dir="build/logs"/>
-		<delete dir="build/docs"/>
+		<delete dir="build"/>
 	</target>
 	
 	<target name="prepare">
@@ -41,7 +40,7 @@
 	
 	<target name="code-coverage">
 		<exec dir="." executable="phpunit" failonerror="true">
-			<arg line="--coverage-html /Applications/MAMP/htdocs/code-coverage ."/>
+			<arg line="--coverage-clover build/logs/clover.xml ."/>
 		</exec>
 	</target>
 	
