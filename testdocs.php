@@ -40,5 +40,6 @@
  * @since      File available since Release 
  */
 class MyTestClass {
+	if (
 }
 ?>
