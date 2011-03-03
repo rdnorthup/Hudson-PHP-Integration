@@ -25,7 +25,7 @@
 
 	<!-- Run PHP CodeStyle on the entire codebase and generate a checkstyle formatted report. -->	
 	<target name="phpcs">
-		<exec dir="." executable="phpcs" failonerror="true" output="target/docs/checkstyle.xml">
+		<exec dir="." executable="phpcs" failonerror="false" output="target/docs/checkstyle.xml">
 			<arg line="--report=checkstyle --error-severity=4 ."/>
 		</exec>
 	</target>
