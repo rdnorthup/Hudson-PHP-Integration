@@ -2,7 +2,7 @@
 
 <project name="Test Job" default="build">
 
-	<target name="build" depends="clean, prepare, phpcs, pdepend, phpunit, code-coverage">
+	<target name="build" depends="clean, prepare, phpdoc, phpcs, phpunit">
 	</target>
 	
 	<target name="clean">
@@ -34,15 +34,10 @@
 	
 	<target name="phpunit">
 		<exec dir="." executable="phpunit" failonerror="true">
-			<arg line="--log-junit build/logs/junit.xml --coverage-clover build/logs/clover.xml --verbose test"/>
+			<arg line="--log-junit build/logs/junit.xml --coverage-clover build/logs/clover.xml test"/>
 		</exec>
 	</target>
-	
-	<target name="code-coverage">
-		<exec dir="." executable="phpunit" failonerror="true">
-			<arg line="--coverage-clover build/logs/clover.xml ."/>
-		</exec>
-	</target>
+
 	
 </project>
 
