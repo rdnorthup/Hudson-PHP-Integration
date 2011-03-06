@@ -23,7 +23,7 @@
 		</exec>
 	</target>
 
-	<!-- Run PHP CodeStyle on the entire codebase and generate a checkstyle formatted report. -->	
+	<!-- Run PHP Codesniffer on the entire codebase and generate a checkstyle formatted report. -->	
 	<target name="phpcs">
 		<exec dir="." executable="phpcs" failonerror="false" output="target/docs/checkstyle.xml">
 			<arg line="--report=checkstyle ."/>
